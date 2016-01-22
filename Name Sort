@@ -1,0 +1,27 @@
+Concept:
+aa
+aaa
+allan
+ax 
+
+Comment: so total number of letters should be disregarded, 
+Comment: it' whether the letter in the array index is greater than the letter in the other indices
+Comment: Compare letters (higher number in index is lower on the list (DESCENDING ORDER))
+
+Parameters:
+Alphabet = array a through z
+X = integer
+Name = unsorted list of names
+Sorted = blank list 
+array = blank array local to functionA
+
+Sorted[1] is populated with the first name on list
+for X in Name: // functionA 
+  create array 
+  array is appended by each letter of a name based on the indexed value in Alphabet   
+  for Y in array: //function B
+    if array[Y] > Sorted[Y]
+      continue until the array index value is higher than ordinal list of names under Sorted
+    else if  array index values runs out (then it is placed before)
+
+
