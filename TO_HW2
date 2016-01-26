@@ -1,0 +1,448 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "8\n",
+      "13\n",
+      "21\n",
+      "34\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 1: Fibonacci Sequence Calculator\n",
+    "\n",
+    "def fib(n):\n",
+    "    fibo=[0,1]\n",
+    "    i=0\n",
+    "    while fibo[i] < n: #While loop comparing index of a vector to user input integer n\n",
+    "        print (fibo[i]) #Prints integer of indexed position that is still (based on a true while loop) less than n\n",
+    "        nextfibo = fibo[i] + fibo[i+1]\n",
+    "        i +=1\n",
+    "        fibo.append(nextfibo) #Appends vector with next number of Fibonacci sequence\n",
+    "\n",
+    "fib(55)\n",
+    "# When n <= fibo[i], while loop stops"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "they're equal\n",
+      "the largest is 1\n",
+      "the largest is 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 2: Max of Two \n",
+    "\n",
+    "def my_max(x,y):\n",
+    "    if x > y:\n",
+    "        print (\"the largest is\", x)\n",
+    "    elif x == y:\n",
+    "        print (\"they're equal\")\n",
+    "    else:\n",
+    "        print (\"the largest is\", y)\n",
+    "    \n",
+    "my_max(0,0)\n",
+    "my_max(1,0)\n",
+    "my_max(0,1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the largest is 3\n",
+      "the largest is 6\n",
+      "the largest is 9\n",
+      "The two largest are 1\n",
+      "The two largest are 1\n",
+      "they're all equal\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 3: Max of Three\n",
+    "\n",
+    "def max_of_three(x,y,z):\n",
+    "    if x > y:\n",
+    "        if x > z:\n",
+    "            print (\"the largest is\", x)\n",
+    "        elif x == z:\n",
+    "            print (\"The two largest are\", x)\n",
+    "    elif y > z:\n",
+    "        if y > x:\n",
+    "            print (\"the largest is\", y)\n",
+    "        elif y == z:\n",
+    "            print (\"The two largest are\", y)\n",
+    "    elif z > x:\n",
+    "        if z > y:\n",
+    "            print (\"the largest is\", z)\n",
+    "        elif y == z:\n",
+    "            print (\"The two largest are\", z)\n",
+    "    else:\n",
+    "        print (\"they're all equal\")\n",
+    "    \n",
+    "max_of_three(1,2,3)\n",
+    "max_of_three(6,5,4)\n",
+    "max_of_three(7,9,8)\n",
+    "max_of_three(1,1,0)\n",
+    "max_of_three(0,1,1)\n",
+    "max_of_three(1,0,1)\n",
+    "max_of_three(0,0,0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 94,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#HW2, Problem 4: List or String Length\n",
+    "\n",
+    "def mylen(a):\n",
+    "    i = 0\n",
+    "    for n in a:\n",
+    "        i+=1\n",
+    "    print (i)\n",
+    "     \n",
+    "mylen([1,2,3])\n",
+    "mylen(\"Dog\")\n",
+    "    \n",
+    "\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "It's a vowel\n",
+      "It's a consonant\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 5: Vowels or Consonants\n",
+    "\n",
+    "def vowel(letter):\n",
+    "    if letter == \"a\" or letter == \"e\" or letter == \"i\" or letter == \"o\" or letter == \"u\" :\n",
+    "        print (\"It's a vowel\")\n",
+    "    else:\n",
+    "        print (\"It's a consonant\")\n",
+    "           \n",
+    "vowel(\"e\")\n",
+    "vowel(\"f\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "heelloo hoolaa\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 6: Translate\n",
+    "\n",
+    "def translate(string):\n",
+    "    word = \"\"\n",
+    "    for letter in string:\n",
+    "        if letter == \"a\" or letter == \"e\" or letter == \"i\" or letter == \"o\" or letter == \"u\" :\n",
+    "            word += 2*letter\n",
+    "        else:\n",
+    "            word += letter\n",
+    "    print (word)\n",
+    "    \n",
+    "translate(\"hello hola\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "24\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 7: Sum and Multiply (of Lists)\n",
+    "\n",
+    "def sum(a):\n",
+    "    b=0\n",
+    "    for n in a:\n",
+    "        b+=n\n",
+    "    print (b)\n",
+    "\n",
+    "def multiply(a):\n",
+    "    b=1\n",
+    "    for n in a:\n",
+    "        b*=n\n",
+    "    print (b)\n",
+    "\n",
+    "sum([1,2,3,4])\n",
+    "multiply([1,2,3,4])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 95,
+   "metadata": {
+    "collapsed": false,
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "eohsesroh\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 8: esreveR \n",
+    "\n",
+    "def reverse(string):\n",
+    "    esrever = \"\"\n",
+    "    b = len(string)-1\n",
+    "    while b+1 > 0:\n",
+    "        esrever += string[b]\n",
+    "        b-=1\n",
+    "    print(esrever)\n",
+    "    \n",
+    "reverse(\"horseshoe\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 9: Palindromes \n",
+    "\n",
+    "def is_Palindrome(string):\n",
+    "    grints = \"\"\n",
+    "    b = len(string)-1\n",
+    "    while b+1 > 0:\n",
+    "        grints += string[b]\n",
+    "        b-=1\n",
+    "    if string == grints:\n",
+    "        print(True)\n",
+    "    else:\n",
+    "        print(False)\n",
+    "    \n",
+    "is_Palindrome(\"amanaplanacanalpanama\")\n",
+    "is_Palindrome(\"horsehoe\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 10: Are you a member?\n",
+    "\n",
+    "def is_member(x):\n",
+    "    a = [\"georgetown\",\"pilcher\",\"math\", 510, 25.4]\n",
+    "    result = 0\n",
+    "    for n in a:\n",
+    "        if n == x:\n",
+    "            result = 1 #You are a member.\n",
+    "        else:\n",
+    "            result += 0 #You are not a member.\n",
+    "    print(bool(result))\n",
+    "    \n",
+    "is_member(\"math\")\n",
+    "is_member(25.4)\n",
+    "is_member(\"whatever\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 134,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 11: Checking for Overlap\n",
+    "\n",
+    "def overlapping(x,y):\n",
+    "    result = 0\n",
+    "    for n in x:\n",
+    "        for m in y:\n",
+    "            if n == m:\n",
+    "                result = 1 #There's at least 1 match\n",
+    "            else:\n",
+    "                result += 0 #Zero overlap\n",
+    "    print(bool(result))\n",
+    "\n",
+    "overlapping([1,2,3,4],[0,9,8,7,6,5])\n",
+    "overlapping([1,2,3,4],[0,9,8,7,6,4])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 147,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "charcharcharcharchar\n"
+     ]
+    }
+   ],
+   "source": [
+    "#HW2, Problem 12: Generate Characters\n",
+    "\n",
+    "def generate_n_chars(n,c):\n",
+    "    m = 0\n",
+    "    d = \"\"\n",
+    "    while m < n:\n",
+    "        d += c\n",
+    "        m += 1\n",
+    "    print(d)\n",
+    "\n",
+    "generate_n_chars(5,\"char\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
