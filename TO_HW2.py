@@ -15,12 +15,14 @@ def fib(n): #function fib takes variable n (integer type)
         fibo.append(nextfibo) #Appends vector with next number of Fibonacci sequence. 
     # When n <= fibo[i], while loop stops.
     
-fib(55)
+print(fib(55), '\n')
 
 
 # In[22]:
 
 #HW2, Problem 2: Max of Two 
+
+## Best practice is to return the values without calling the print function.
 
 def my_max(x,y): #function takes two variables, x and y (both integer type), and compares them.
     a = "The largest is %d" #String statement with %d (string formatting) as a placeholder for double variable.
@@ -39,6 +41,8 @@ print(my_max(0,4))
 # In[25]:
 
 #HW2, Problem 3: Max of Three
+
+## Best practice is to return the values without calling the print function.
 
 def max_of_three(x,y,z): #function takes three variables and compares them.
     a = "The largest is %d" #String statement with %d (string formatting) as a placeholder for double variable.
@@ -174,19 +178,21 @@ print(is_Palindrome("horsehoe"))
 
 #HW2, Problem 10: Are you a member?
 
-def is_member(x): #Function to check variable x (any type) against values in a list.
-    a = ["georgetown","pilcher","math", 510, 25.4] #Predefine a membership list for comparison.
-    result = 0    #Set function output to 0 (assumes not a member until proven otherwise)
-    for n in a:   #For each value in vector a,...
-        if n == x:     #... if the value, n, is equal to x, 
-            result = 1     # set counter to 1 (meaning the outcome is true everytime a match is found)
-        else:          #... if the value is not equal, 
-            result += 0    # add 0 to the counter (which does not affect the counter if it already 0 or 1). The counter is not affected by any instance where there is no match.
-    return bool(result) #If there is at least 1 match (anywhere in the list), result = 1, and boolean of 1 is True. Otherwise, result = 0 and boolean is False.
-    
-print(is_member("math"))
-print(is_member(25.4))
-print(is_member("whatever"))
+## This function should take two parameters, not just one.
+
+# def is_member(x): #Function to check variable x (any type) against values in a list.
+#     a = ["georgetown","pilcher","math", 510, 25.4] #Predefine a membership list for comparison.
+#     result = 0    #Set function output to 0 (assumes not a member until proven otherwise)
+#     for n in a:   #For each value in vector a,...
+#         if n == x:     #... if the value, n, is equal to x,
+#             result = 1     # set counter to 1 (meaning the outcome is true everytime a match is found)
+#         else:          #... if the value is not equal,
+#             result += 0    # add 0 to the counter (which does not affect the counter if it already 0 or 1). The counter is not affected by any instance where there is no match.
+#     return bool(result) #If there is at least 1 match (anywhere in the list), result = 1, and boolean of 1 is True. Otherwise, result = 0 and boolean is False.
+#
+# print(is_member("math"))
+# print(is_member(25.4))
+# print(is_member("whatever"))
 
 
 # In[37]:
@@ -237,8 +243,64 @@ def generate_n_chars(n,c): #function takes n (integer type) and c (character typ
 
 print(generate_n_chars(5,"char"))
 
+##TEST CASES
 
-# In[ ]:
+print('#1\n')
+fib(500)
+print('\n')
 
+print('#2\n')
+print(my_max(45,987), '\n')
 
+print('#3\n')
+print(max_of_three(3,4,5),'\n')
+
+print('#4\n')
+print(mylen('Gerhard'))
+print(mylen([1,2,3,4,5,6,7]))
+print('\n')
+
+print('#5\n')
+print(vowel('e'))
+print(vowel('H'))
+print('\n')
+
+print('#6\n')
+print(translate("this is fun"))
+print(translate('aeiou'))
+print(translate('YYYYYYY'))
+print(translate("mmmmmm"))
+print('\n')
+
+print('#7\n')
+print(sum([1,2,3,4,5]))
+print('\n')
+
+print('#8\n')
+print(multiply([0,1,2,3]))
+print(multiply([1,2,3,4]))
+print('\n')
+
+print('#9\n')
+print(reverse("gnitset ma I"))
+print('\n')
+
+print('#10\n')
+print(is_Palindrome('radar'))
+print(is_Palindrome('Gerhard'))
+print('\n')
+
+print('#11\n')
+# print(is_member('dog', ['cat', 'dog', 'zebra']))
+# print(is_member(3, [1,2,3,4]))
+# print(is_member(3, [5,6,7]))
+print('\n')
+
+print('#12\n')
+print(overlapping([1,2,3], [3,4,5]))
+print(overlapping([1,2,3], [6,4,5]))
+print('\n')
+
+print('#13\n')
+print(generate_n_chars(7, 'g'))
 
