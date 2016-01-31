@@ -5,6 +5,8 @@
 
 #HW2, Problem 1: Fibonacci Sequence Calculator
 
+## You need to add header documentation using doc strings for all functions.
+
 def fib(n): #function fib takes variable n (integer type)
     fibo=[0,1]
     i=0
