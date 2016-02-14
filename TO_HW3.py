@@ -52,7 +52,7 @@ def mapping(list):
 
 #HW3, Problem 4
 
-def ind_longest_word(list):
+def find_longest_word(list):
     '''Returns the length of the longest word in a list.
     
     Takes list input and returns integer. Combines mapping() and max_in_list() functions.'''
@@ -133,7 +133,7 @@ def bottles():
     '''Prints song verses of 99 bottles of Coke.
     
     Takes no variable as input and prints strings.'''
-    i = 99          #Set bottle count to 99
+    i = 9          #Set bottle count to 99
     while i != 0:   #While bottle count is not 0, print the verse with number variable placeholders (%d) reflecting current bottle counts before and after drinking 1 more bottle.
         print('%d bottles of coke on the wall, %d bottles of coke. \nTake one down, pass it around, %d bottles of coke on the wall. \n' % (i,i,i-1))
         i -=1       #Lower bottle count after drinking 1 bottle. 
@@ -160,7 +160,7 @@ def translate(list):
 # In[13]:
 
 #HW3, Problem 10
-
+## Should return the string instead of printing it
 def char_freq(string):
     '''Build dictionary counting frequency of characters.
     
@@ -177,7 +177,7 @@ def char_freq(string):
 # In[14]:
 
 #HW3, Problem 11
-
+## Should return the string instead of printing it
 def ROT13(string):
     '''Decodes or encodes a message based on Caesar Cipher.
     
@@ -196,7 +196,7 @@ def ROT13(string):
 # In[10]:
 
 #HW3, Problem 12
-
+## Should return the string instead of printing it
 def correct(string):
     '''Corrects spacing errors in a sentence.
     
@@ -242,7 +242,7 @@ def make_3sg_form(verb):
 # In[7]:
 
 #HW3, Problem 14
-
+## Doesn't work in all cases, see my test cases - Prof G
 def make_ing_form(verb):
     '''Heuristic methods to conjugate infinitive verbs into present participle form.
     
@@ -262,8 +262,43 @@ def make_ing_form(verb):
     return verb 
         
 
+##Test Cases
+help(histogram)
+help(make_ing_form)
 
-# In[ ]:
+print("1 Histogram ", histogram([1,2,3,5,6,7,6,5,4,3,2,1]), '\n')
+
+print("2 Max in List 77 ", max_in_list([1,2,3,77,4,5,6,7]), '\n')
+
+print("3 word to length map 3,5,7,4 ", mapping(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("4 Longest word 7 ", find_longest_word(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("5 filter long words snake, dolphin ", filter_long_word(['dog', 'snake', 'dolphin', 'cats'],4), '\n')
+
+print("6 Palindrome phrase TRUE ", palindrome2("Go hang a salami I'm a lasagna hog."), '\n')
+
+print("7 Pangram TRUE ", pangram("The quick brown fox jumps over the lazy dog."), '\n')
+
+print("8 Cokes \n", bottles())
+
+print("9 Translating to Swedish ['god', 'jul', 'gott'] ", translate(['merry', 'christmas', 'happy']), '\n')
+
+print("10 Char Freq {'a': 7, 'c': 3, 'b': 14, 'e': 2, 'd': 3, 'g': 7, 'f': 3} ", char_freq("agbbabgcbdbabdgbdbabageebabcbgcbffgfabg"), '\n')
+
+print("11 Decoder Caesar cipher? I much prefer Caesar salad!", ROT13("Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!"), '\n')
+
+print("12 correct This is very funny and cool. Indeed!", correct("This is very funny and cool.Indeed!"), '\n')
+
+print("13 3ps brushes ", make_3sg_form("brush"), '\n')
+print("13 3ps tries ", make_3sg_form("try"), '\n')
+print("13 3ps runs ", make_3sg_form("run"), '\n')
+print("13 3ps fixes ", make_3sg_form("fix"), '\n')
+
+print("14 ing lying ", make_ing_form("lie"), '\n')
+print("14 ing seeing ", make_ing_form("see"), '\n')
+print("14 ing moving ", make_ing_form("move"), '\n')
+print("14 ing hugging ", make_ing_form("hug"), '\n')
 
 
 
